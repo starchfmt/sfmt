@@ -1,0 +1,783 @@
+<html>
+<head>
+<script type="text/javascript">
+   
+var z = "\u2008\u2008\u2008\u2008\u2008";
+
+function help(){
+alert("This lets you make text out of steam emoticons in steam chat.\nJust plop an emoticon in the top, word underneath, and press babalou!\nSome irregular characters conflict, they are listed at the bottom.\nWith extras, chose 3 different emoticons and press the button you want.");
+}
+
+function holler(){
+   if(z == "\u2008\u2008\u2008\u2008\u2008"){
+      z = "     ";
+      document.getElementById("comment_id").value = "comment compatibility OFF"; 
+      document.getElementById("comment_id").setAttribute("style","background-color:#E26D68;width:200px");
+   }
+   else if(z == "     "){
+      z = "\u2008\u2008\u2008\u2008\u2008";
+      document.getElementById("comment_id").value = "comment compatibility ON";
+      document.getElementById("comment_id").setAttribute("style","background-color:#88DD61;width:200px");
+   }
+}
+
+function extras(){
+   if(document.getElementById("span_id").style.visibility == "hidden"){
+   document.getElementById("span_id").style.visibility = "visible";
+   document.getElementById("span2_id").style.visibility = "visible";
+   document.getElementById("textbox_id").setAttribute("style","width:268px");
+   document.getElementById("babalou_id").value = "extras require multiple emoticons, boy.";
+   document.getElementById("extras_id").value = "disable extras!";
+   }
+   else if(document.getElementById("span_id").style.visibility == "visible"){
+   document.getElementById("span_id").style.visibility = "hidden";
+   document.getElementById("span2_id").style.visibility = "hidden";
+   document.getElementById("textbox_id").setAttribute("style","width:500px");
+   document.getElementById("babalou_id").value = "";
+   document.getElementById("extras_id").value = "enable extras!";
+   }
+}
+
+function clearInput(){
+  document.getElementById("dotboy_id").value= '.';
+  document.getElementById("babalou_id").value= '';
+  document.getElementById("dotboy_id").style.backgroundColor = "";   
+  document.getElementById("textbox_id").style.backgroundColor = "";   
+  document.getElementById("babalou_id").style.backgroundColor = "";   
+}
+
+function clearEmoticon(){
+  document.getElementById("textbox_id").value= '';
+}
+
+function linebreakInput(){
+  var x = document.getElementById("dotboy_id").value;
+  var y = document.getElementById("textbox_id").value;
+  document.getElementById("dotboy_id").value= x + '\n';
+}
+
+function babalou(){
+   var baba = document.getElementById("babalou_id").value;
+   var length = baba.length;
+   var i = 0;
+   
+   document.getElementById("dotboy_id").value = ".";
+   linebreakInput();  //line 1
+   while (i < length) {
+      //document.getElementById("dotboy_id").value += baba.charAt(i);
+      line1(baba.charAt(i));
+      i = i + 1;
+   } 
+   linebreakInput();  //line 2
+   i = 0;
+   while (i < length) {
+      //document.getElementById("dotboy_id").value += baba.charAt(i);
+      line2(baba.charAt(i));
+      i = i + 1;
+   } 
+ linebreakInput();  //line3
+   i = 0;
+   while (i < length) {
+      //document.getElementById("dotboy_id").value += baba.charAt(i);
+      line3(baba.charAt(i));
+      i = i + 1;
+   } 
+ linebreakInput();  //line4
+   i = 0;
+   while (i < length) {
+      //document.getElementById("dotboy_id").value += baba.charAt(i);
+      line4(baba.charAt(i));
+      i = i + 1;
+   } 
+ linebreakInput();  //line5
+   i = 0;
+   while (i < length) {
+      //document.getElementById("dotboy_id").value += baba.charAt(i);
+      line5(baba.charAt(i));
+      i = i + 1;
+   } 
+ linebreakInput();  //line6
+   i = 0;
+   while (i < length) {
+      //document.getElementById("dotboy_id").value += baba.charAt(i);
+      line6(baba.charAt(i));
+      i = i + 1;
+   } 
+ linebreakInput();  //line7
+   i = 0;
+   while (i < length) {
+      //document.getElementById("dotboy_id").value += baba.charAt(i);
+      line7(baba.charAt(i));
+      i = i + 1;
+   } 
+ linebreakInput();  //line8
+   i = 0;
+   while (i < length) {
+      //document.getElementById("dotboy_id").value += baba.charAt(i);
+      line8(baba.charAt(i));
+      i = i + 1;
+   } 
+}
+
+
+function line1(beef){
+
+   var x = document.getElementById("dotboy_id").value;
+   var y = document.getElementById("textbox_id").value;
+
+   if(beef == " "){
+   document.getElementById("dotboy_id").value =  x  + z + z;
+}
+
+   else if(beef == "a" || beef == "b" || beef == "c" || beef == "e" || beef == "f" || beef == "g" || beef == "i" || beef == "j" || beef == "o"  || beef == "p" || beef == "s"  || beef == "t"  || beef == "z"){
+   document.getElementById("dotboy_id").value =  x  + y + y + y + z;
+}
+   else if(beef == "d" || beef == "q" || beef == "r"){
+  document.getElementById("dotboy_id").value =  x  + y + y + z + z;
+}
+   else if(beef == "h" || beef == "k" || beef == "u" || beef == "v" || beef == "x" || beef == "y"){
+  document.getElementById("dotboy_id").value =  x  + y + z + y + z;
+}
+   else if(beef == "m" || beef == "w"){
+  document.getElementById("dotboy_id").value =  x  + y + z + z + z + y + z;
+}
+   else if(beef == "l"){
+  document.getElementById("dotboy_id").value =  x  + y + z + z + z;
+}
+   else if(beef == "n"){
+  document.getElementById("dotboy_id").value =  x  + y + z + z + y + z;
+}
+   else if(beef == "."){
+  document.getElementById("dotboy_id").value =  x  + z + z;
+}
+   else if(beef == "!"){
+  document.getElementById("dotboy_id").value =  x  + y + z;
+}
+   else if(beef == "?"){
+  document.getElementById("dotboy_id").value =  x  + y + y + z;
+}
+   else if(beef == "/"){
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z;
+}
+   else if(beef == "#"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z + y + z + z;
+}
+   else if(beef == "_"){
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z;
+}
+   else if(beef == "("){
+  document.getElementById("dotboy_id").value =  x  + z + y + z;
+}
+   else if(beef == ")"){
+  document.getElementById("dotboy_id").value =  x  + y + z + z;
+}
+   else if(beef == "*"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z;
+}
+   else if(beef == "'"){
+  document.getElementById("dotboy_id").value =  x  + y + z;
+}
+   else if(beef == "\u212F"){ //fancy e
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z + z;
+}
+   else if(beef == "\u2139"){ //information icon
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z;
+}
+   else if(beef == "\u266A"){  //single music note
+  document.getElementById("dotboy_id").value =  x  + z + z + y + y + z + z;
+}
+   else if(beef == "\u266B"){ //double music note
+  document.getElementById("dotboy_id").value =  x  + z + y + y + y + y + z;
+}
+   else if(beef == "\u263A"){ //smiley face
+  document.getElementById("dotboy_id").value =  x  + y + z + z + y + z;
+}
+   else if(beef == "\u263B"){ //inverse smiley face
+  document.getElementById("dotboy_id").value =  x  + z + y + y + y + y + z + z;          
+}
+   else if(beef == "ÿ"){ //alt 152
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z + z + z + z + y + z + z + z + z + z + z  + y + z + z;          
+}
+   else if(beef == "\u2603"){ //snowman face
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z + z + y + y + z + z;          
+}
+   else if(beef == "\u2100"){ //plant
+  document.getElementById("dotboy_id").value =  x + z + z + z + z + y + z + z + z + z + z;          
+}
+   else if(beef == "\u2108"){ //man1
+  document.getElementById("dotboy_id").value =  x + z + y + y + y + y + y + z + z;          
+}
+   else if(beef == "\u017F"){ //grinning
+  document.getElementById("dotboy_id").value =  x + z + y + y + y + y + y + y + y + y + y + z + z;          
+}
+}
+
+function line2(beef){
+
+   var x = document.getElementById("dotboy_id").value;
+   var y = document.getElementById("textbox_id").value;
+
+   if(beef == " "){
+   document.getElementById("dotboy_id").value =  x  + z + z;
+}
+
+   else if(beef == "a" || beef == "b" || beef == "d" || beef == "d" || beef == "h" || beef == "k" || beef == "o" || beef == "p" || beef == "q" || beef == "r" || beef == "u" || beef == "v" || beef == "x" || beef == "y" ){
+   document.getElementById("dotboy_id").value =  x  + y + z + y + z;
+}
+   else if(beef == "c" || beef == "e" || beef == "f" || beef == "g" || beef == "l" || beef == "s"){
+   document.getElementById("dotboy_id").value =  x  + y + z + z + z;
+}
+   else if(beef == "i" || beef == "j" || beef == "t"){
+   document.getElementById("dotboy_id").value =  x  + z + y + z + z;
+}
+   else if(beef == "m"){
+   document.getElementById("dotboy_id").value =  x  + y + y + z + y + y + z;
+}
+   else if(beef == "n"){
+   document.getElementById("dotboy_id").value =  x  + y + y + z + y + z;
+}
+   else if(beef == "w"){
+   document.getElementById("dotboy_id").value =  x  + y + z + z + z + y + z;
+}
+   else if(beef == "z"){
+   document.getElementById("dotboy_id").value =  x  + z + z + y + z;
+}
+   else if(beef == "."){
+  document.getElementById("dotboy_id").value =  x  + z + z;
+}
+   else if(beef == "!"){
+  document.getElementById("dotboy_id").value =  x  + y + z;
+}
+   else if(beef == "?"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z;
+}
+   else if(beef == "/"){
+  document.getElementById("dotboy_id").value =  x  + z + z + y + z;
+}
+   else if(beef == "#"){
+  document.getElementById("dotboy_id").value =  x  + y + y + y + y + y + z;
+}
+   else if(beef == "_"){
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z;
+}
+   else if(beef == "("){
+  document.getElementById("dotboy_id").value =  x  + y + z + z;
+}
+   else if(beef == ")"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z;
+}
+   else if(beef == "*"){
+  document.getElementById("dotboy_id").value =  x  + y + y + y + z;
+}
+   else if(beef == "'"){
+  document.getElementById("dotboy_id").value =  x  + y + z;
+}
+   else if(beef == "\u212F"){ //fancy e
+  document.getElementById("dotboy_id").value =  x  + y + z + y + z + z;
+}
+   else if(beef == "\u2139"){ //information icon
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z;
+}
+   else if(beef == "\u266A"){  //single music note
+  document.getElementById("dotboy_id").value =  x  + z + z + y + z + y + z;
+}
+   else if(beef == "\u266B"){ //double music note
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z + y + z;
+}
+   else if(beef == "\u263A"){ //smiley face
+  document.getElementById("dotboy_id").value =  x  + y + z + z + y + z;
+}
+   else if(beef == "\u263B"){ //inverse smiley face
+  document.getElementById("dotboy_id").value =  x  + y + z + y + y + z + y + z;
+}
+   else if(beef == "ÿ"){ //alt 152
+  document.getElementById("dotboy_id").value =  x  + y + z + z + y + y + z + z + y + z + z + z + y + y + z + z + y + z;          
+}
+   else if(beef == "\u2603"){ //snowman face
+  document.getElementById("dotboy_id").value =  x  + y + y + z + z + z + y + y + z + z;          
+}
+   else if(beef == "\u2100"){ //plant
+  document.getElementById("dotboy_id").value =  x + z + z + z + y + y + y + z + z + z + z;          
+}
+   else if(beef == "\u2108"){ //man1
+  document.getElementById("dotboy_id").value =  x + y + z + z + z + z + z + y + z;          
+}
+   else if(beef == "\u017F"){ //grinning
+  document.getElementById("dotboy_id").value =  x + y + y + y + z + z + y + z + z + y + y + y + z;          
+}
+}
+
+function line3(beef){
+
+   var x = document.getElementById("dotboy_id").value;
+   var y = document.getElementById("textbox_id").value;
+
+   if(beef == " "){
+   document.getElementById("dotboy_id").value =  x  + z + z;
+}
+
+  else if(beef == "a" || beef == "e" || beef == "f" || beef == "h" || beef == "p" || beef == "s"){
+   document.getElementById("dotboy_id").value =  x  + y + y + y + z;
+}
+   else if(beef == "b" || beef == "k" || beef == "r"){
+   document.getElementById("dotboy_id").value =  x  + y + y + z + z;
+}
+   else if(beef == "c" || beef == "g" || beef == "l"){
+   document.getElementById("dotboy_id").value =  x  + y + z + z + z;
+}
+   else if(beef == "d" || beef == "o" || beef == "q" || beef == "u" || beef == "v"){
+   document.getElementById("dotboy_id").value =  x  + y + z + y + z;
+}
+   else if(beef == "i" || beef == "j" || beef == "t" || beef == "x" || beef == "y" || beef == "z"){
+   document.getElementById("dotboy_id").value =  x  + z + y + z + z;
+}
+   else if(beef == "m"){
+   document.getElementById("dotboy_id").value =  x  + y + z + y + z + y + z;
+}
+   else if(beef == "n"){
+   document.getElementById("dotboy_id").value =  x  + y + z + y + y + z;
+}
+   else if(beef == "w"){
+   document.getElementById("dotboy_id").value =  x  + y + z + z + z + y + z;
+}
+   else if(beef == "."){
+  document.getElementById("dotboy_id").value =  x  + z + z;
+}
+   else if(beef == "!"){
+  document.getElementById("dotboy_id").value =  x  + y + z;
+}
+   else if(beef == "?"){
+  document.getElementById("dotboy_id").value =  x  + y + y + z;
+}
+   else if(beef == "/"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z;
+}
+   else if(beef == "#"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z + y + z + z;
+}
+   else if(beef == "_"){
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z;
+}
+   else if(beef == "("){
+  document.getElementById("dotboy_id").value =  x  + y + z + z;
+}
+   else if(beef == ")"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z;
+}
+   else if(beef == "*"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z;
+}
+   else if(beef == "'"){
+  document.getElementById("dotboy_id").value =  x  + z + z;
+}
+   else if(beef == "\u212F"){ //fancy e
+  document.getElementById("dotboy_id").value =  x  + y + y + z + z + z;
+}
+   else if(beef == "\u2139"){ //information icon
+  document.getElementById("dotboy_id").value =  x  + y + y + z + z;
+}
+   else if(beef == "\u266A"){  //single music note
+  document.getElementById("dotboy_id").value =  x  + z + z + y +  z + z + z;
+}
+   else if(beef == "\u266B"){ //double music note
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z + y + z;
+}
+   else if(beef == "\u263A"){ //smiley face
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z + z;
+}
+   else if(beef == "\u263B"){ //inverse smiley face
+  document.getElementById("dotboy_id").value =  x  + y + z + y + y + z + y + z        ;
+}
+   else if(beef == "ÿ"){ //alt 152
+  document.getElementById("dotboy_id").value =  x  + y + z + y + y + z + y + z + z + y + z + y + y + z + y + z + y + z;          
+}
+   else if(beef == "\u2603"){ //snowman face
+  document.getElementById("dotboy_id").value =  x  + y + y + z + z + z + z + z + z + z;          
+}
+   else if(beef == "\u2100"){ //plant
+  document.getElementById("dotboy_id").value =  x + z + z + z + y + y + y + z + z + z + z;          
+}
+   else if(beef == "\u2108"){ //man1
+  document.getElementById("dotboy_id").value =  x + y + z + y + z + z + y + y + z;          
+}
+   else if(beef == "\u017F"){ //grinning
+  document.getElementById("dotboy_id").value =  x + y + y + y + z + z + y + z + z + y + y + y + z;          
+}
+}
+
+function line4(beef){
+
+   var x = document.getElementById("dotboy_id").value;
+   var y = document.getElementById("textbox_id").value;
+
+   if(beef == " "){
+   document.getElementById("dotboy_id").value =  x  + z + z;
+}
+
+   else if(beef == "a" || beef == "b" || beef == "d" || beef == "g" || beef == "h" || beef == "o" || beef == "q" || beef == "r" || beef == "u" || beef == "v" || beef == "k" || beef == "x"){
+   document.getElementById("dotboy_id").value =  x  + y + z + y + z;
+}
+   else if(beef == "c" || beef == "e" || beef == "f" || beef == "l" || beef == "p" || beef == "z"){
+   document.getElementById("dotboy_id").value =  x  + y + z + z + z;
+}
+   else if(beef == "i" || beef == "j" || beef == "t" || beef == "y"){
+   document.getElementById("dotboy_id").value =  x  + z + y + z + z;
+}
+   else if(beef == "m"){
+   document.getElementById("dotboy_id").value =  x  + y + z + z + z + y + z;
+}
+   else if(beef == "n"){
+   document.getElementById("dotboy_id").value =  x  + y + z + z + y + z;
+}
+   else if(beef == "s"){
+   document.getElementById("dotboy_id").value =  x  +  z + z + y + z;
+}
+   else if(beef == "w"){
+   document.getElementById("dotboy_id").value =  x  + y + z + y + z + y + z;
+}
+   else if(beef == "\u266A"){  //single music note
+  document.getElementById("dotboy_id").value =  x  + y + y + y + z + z + z;
+}
+   else if(beef == "."){
+  document.getElementById("dotboy_id").value =  x  + z + z;
+}
+   else if(beef == "!"){
+  document.getElementById("dotboy_id").value =  x  + z + z;
+}
+   else if(beef == "?"){
+  document.getElementById("dotboy_id").value =  x  + z + z + z;
+}
+   else if(beef == "/"){
+  document.getElementById("dotboy_id").value =  x  + y + z + z + z;
+}
+   else if(beef == "#"){
+  document.getElementById("dotboy_id").value =  x  + y + y + y + y + y + z;
+}
+   else if(beef == "_"){
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z;
+}
+   else if(beef == "("){
+  document.getElementById("dotboy_id").value =  x  + y + z + z;
+}
+   else if(beef == ")"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z;
+}
+   else if(beef == "*"){
+  document.getElementById("dotboy_id").value =  x  + y + z + y + z;
+}
+   else if(beef == "'"){
+  document.getElementById("dotboy_id").value =  x  + z + z;
+}
+   else if(beef == "\u212F"){ //fancy e
+  document.getElementById("dotboy_id").value =  x  + y + z + z + y + z;
+}
+   else if(beef == "\u2139"){ //information icon
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z;
+}
+   else if(beef == "\u266B"){ //double music note
+  document.getElementById("dotboy_id").value =  x  + y + y + z + y + y + z;
+}
+   else if(beef == "\u263A"){ //smiley face
+  document.getElementById("dotboy_id").value =  x  + y + y + y + y + z;
+}
+   else if(beef == "\u263B"){ //inverse smiley face
+  document.getElementById("dotboy_id").value =  x  + y + y + y + y + y + y + z        ;
+}
+   else if(beef == "ÿ"){ //alt 152
+  document.getElementById("dotboy_id").value =  x  + y + z + z + y + z + z + z + z + y + z + z + y + z + z + z + y + z;          
+}
+   else if(beef == "\u2603"){ //snowman face
+  document.getElementById("dotboy_id").value =  x  + z + z + z + y + y + y + y + y + z;          
+}
+   else if(beef == "\u2100"){ //plant
+  document.getElementById("dotboy_id").value =  x + y + y + z + y + y + y + z + y + y + z;          
+}
+   else if(beef == "\u2108"){ //man1
+  document.getElementById("dotboy_id").value =  x + y + z + z + z + z + z + y + z;          
+}
+   else if(beef == "\u017F"){ //grinning
+  document.getElementById("dotboy_id").value =  x + y + z + y + y + y + y + y + y + y + z + y + z;          
+}
+}
+
+function line5(beef){
+
+   var x = document.getElementById("dotboy_id").value;
+   var y = document.getElementById("textbox_id").value;
+
+   if(beef == " "){
+   document.getElementById("dotboy_id").value =  x  + z + z;
+}
+   else if(beef == "a" || beef == "h" || beef == "k" || beef == "r" || beef == "x"){
+   document.getElementById("dotboy_id").value =  x  + y + z + y + z;
+}
+   else if(beef == "b" || beef == "c" || beef == "e" || beef == "g" || beef == "i" || beef == "l" || beef == "o" || beef == "s" || beef == "u" || beef == "z"){
+   document.getElementById("dotboy_id").value =  x  + y + y + y + z;
+}
+   else if(beef == "d" || beef == "j"){
+   document.getElementById("dotboy_id").value =  x  + y  + y + z + z;
+}
+   else if(beef == "f" || beef == "p"){
+   document.getElementById("dotboy_id").value =  x  + y  +  z + z + z;
+}
+   else if(beef == "t" || beef == "v" || beef == "y"){
+   document.getElementById("dotboy_id").value =  x  + z  + y + z + z;
+}
+   else if(beef == "m"){
+   document.getElementById("dotboy_id").value =  x  + y + z + z + z + y + z;
+}
+   else if(beef == "n"){
+   document.getElementById("dotboy_id").value =  x  + y + z + z + y + z;
+}
+   else if(beef == "q"){
+   document.getElementById("dotboy_id").value =  x  + z + y  + y + z;
+}
+   else if(beef == "w"){
+   document.getElementById("dotboy_id").value =  x  + z + y  + z + y + z + z;
+}
+   else if(beef == "."){
+  document.getElementById("dotboy_id").value =  x  + y + z;
+}
+   else if(beef == "!"){
+  document.getElementById("dotboy_id").value =  x  + y + z;
+}
+   else if(beef == "?"){
+  document.getElementById("dotboy_id").value =  x  + y + z + z;
+}
+   else if(beef == "/"){
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z;
+}
+   else if(beef == "#"){
+  document.getElementById("dotboy_id").value =  x  + z + y + z + y + z + z;
+}
+   else if(beef == "_"){
+  document.getElementById("dotboy_id").value =  x  + y + y + y + z;
+}
+   else if(beef == "("){
+  document.getElementById("dotboy_id").value =  x  + z + y + z;
+}
+   else if(beef == ")"){
+  document.getElementById("dotboy_id").value =  x  + y + z + z;
+}
+   else if(beef == "*"){
+  document.getElementById("dotboy_id").value =  x  + z + z + z + z;
+}
+   else if(beef == "'"){
+  document.getElementById("dotboy_id").value =  x  + z + z;
+}
+   else if(beef == "\u212F"){ //fancy e
+  document.getElementById("dotboy_id").value =  x  + z + y + y + z + z;
+}
+   else if(beef == "\u2139"){ //information icon
+  document.getElementById("dotboy_id").value =  x  + y + y + y + z;
+}
+   else if(beef == "\u266A"){  //single music note
+  document.getElementById("dotboy_id").value =  x  + y + y + y + z + z + z;
+}
+   else if(beef == "\u266B"){ //double music note
+  document.getElementById("dotboy_id").value =  x  + y + y + z + y + y + z;
+}
+   else if(beef == "\u263A"){ //smiley face
+  document.getElementById("dotboy_id").value =  x  + z + y + y +  z + z;
+}
+   else if(beef == "\u263B"){ //inverse smiley face
+  document.getElementById("dotboy_id").value =  x  + y + z + z + z + z + y + z        ;
+}
+   else if(beef == "ÿ"){ //alt 152
+  document.getElementById("dotboy_id").value =  x  + y + z + z + z + z + z + z + y + z + z + z + z + z + z + z + y + z;          
+}
+   else if(beef == "\u2603"){ //snowman face
+  document.getElementById("dotboy_id").value =  x  + z + z + z + y + y + z + z + z + z;          
+}
+   else if(beef == "\u2100"){ //plant
+  document.getElementById("dotboy_id").value =  x + y + y + y + z + y + z + y + y + y + z;          
+}
+   else if(beef == "\u2108"){ //man1
+  document.getElementById("dotboy_id").value =  x + y + z + z + y + y + y + y + z;          
+}
+   else if(beef == "\u017F"){ //grinning
+  document.getElementById("dotboy_id").value =  x + y + y + z + z + z + z + z + z + z + y + y + z;          
+}
+}
+
+function line6(beef){
+
+   var x = document.getElementById("dotboy_id").value;
+   var y = document.getElementById("textbox_id").value;
+
+//    if(beef == " "){
+//   document.getElementById("dotboy_id").value =  x  + '          ';
+//}
+//   else if(beef == "a" || beef == "b" || beef == "c" || beef == "e" || beef == "f" || beef == "g" || beef == "h" || beef == "i" || beef == "j" || beef == "k" || beef == "l" || beef == "o" || beef == "p" || beef == "q" || beef == "r" || beef == "s" || beef == "t" || beef == "u" || beef == "v" || beef == "x" || beef == "y" || beef == "z" || beef == "d"){
+//   document.getElementById("dotboy_id").value =  x  + '                    ';
+//}
+//   else if(beef == "m" || beef == "w"){
+//   document.getElementById("dotboy_id").value =  x  + '                              ';
+//}
+//   else if(beef == "n"){
+//   document.getElementById("dotboy_id").value =  x  + '                         ';
+//}
+   if(beef == "\u263B"){ //inverse smiley face
+  document.getElementById("dotboy_id").value =  x  + y + y + z + z + y + y + z;
+}
+   else if(beef == "ÿ"){ //alt 152
+  document.getElementById("dotboy_id").value =  x  + y + z + z + z + z + y + z + z + z + y + z + z + z + z + z + y + z;          
+}
+   else if(beef == "\u2603"){ //snowman face
+  document.getElementById("dotboy_id").value =  x  + y + z + z + z + z + z + y + z + z;          
+}
+   else if(beef == "\u2100"){ //plant
+  document.getElementById("dotboy_id").value =  x + z + y + y + y + y + y + y + y + z + z;          
+}
+   else if(beef == "\u2108"){ //man1
+  document.getElementById("dotboy_id").value =  x + y + z + z + y + z + z + z + z;          
+}
+   else if(beef == "\u017F"){ //grinning
+  document.getElementById("dotboy_id").value =  x + y + z + y + y + y + y + y + y + y + z + y + z;          
+}
+}
+
+function line7(beef){
+
+   var x = document.getElementById("dotboy_id").value;
+   var y = document.getElementById("textbox_id").value;
+
+//   if(beef == " "){
+//   document.getElementById("dotboy_id").value =  x  + '          ';
+//}
+//   else if(beef == "a" || beef == "b" || beef == "c" || beef == "e" || beef == "f" || beef == "g" || beef == "h" || beef == "i" || beef == "j" || beef == "k" || beef == "l" || beef == "o" || beef == "p" || beef == "q" || beef == "r" || beef == "s" || beef == "t" || beef == "u" || beef == "v" || beef == "x" || beef == "y" || beef == "z" || beef == "d"){
+//   document.getElementById("dotboy_id").value =  x  + '                    ';
+//}
+//   else if(beef == "m" || beef == "w"){
+//   document.getElementById("dotboy_id").value =  x  + '                              ';
+//}
+//   else if(beef == "n"){
+//   document.getElementById("dotboy_id").value =  x  + '                         ';
+//}
+   if(beef == "\u263B"){ //inverse smiley face
+  document.getElementById("dotboy_id").value =  x  + z + y + y + y + y + z + z;          
+}
+   else if(beef == "ÿ"){ //alt 152
+  document.getElementById("dotboy_id").value =  x  + z + y + z + z + z + z + y + y + y + z + z + z + z + z + y + z + z;
+  document.getElementById("babalou_id").value = "Pink stinks and your bad";
+  document.getElementById("dotboy_id").style.backgroundColor = "#FFAAE2";   
+  document.getElementById("textbox_id").style.backgroundColor = "#FFAAE2";   
+  document.getElementById("babalou_id").style.backgroundColor = "#FFAAE2";   
+}
+   else if(beef == "\u2603"){ //snowman face
+  document.getElementById("dotboy_id").value =  x  + z + z + y + z + y + z + z + z + z;          
+}
+   else if(beef == "\u2100"){ //plant
+  document.getElementById("dotboy_id").value =  x + z + z + y + y + y + y + y + z + z + z;          
+}
+   else if(beef == "\u2108"){ //man1
+  document.getElementById("dotboy_id").value =  x + y + z + z + z + y + y + y + z;          
+}
+   else if(beef == "\u017F"){ //grinning
+  document.getElementById("dotboy_id").value =  x + y + y + z + z + z + z + z + z + z + y + y + z;          
+}
+}
+
+function line8(beef){
+
+   var x = document.getElementById("dotboy_id").value;
+   var y = document.getElementById("textbox_id").value;
+
+   if(beef == "\u2100"){ //plant
+  document.getElementById("dotboy_id").value =  x + z + z + z + z + y + z + z + z + z + z;          
+}
+   else if(beef == "\u2108"){ //man1
+  document.getElementById("dotboy_id").value =  x + y + z + z + z + z + z + y + z;          
+}
+   else if(beef == "\u017F"){ //grinning
+  document.getElementById("dotboy_id").value =  x + z + y + y + y + y + y + y + y + y + y + z + z;          
+}
+}
+
+
+//EXTRAS BUTTONS
+
+
+function xDragon(){
+   var y = document.getElementById("textbox_id").value;
+   var a = document.getElementById("textbox2_id").value;
+   var b = document.getElementById("textbox3_id").value;
+   document.getElementById("dotboy_id").value = "." + "\n" + z + z + z + y + z + y + z + "\n" + z + y + z + y + y + y + y + "\n" + y + z + z + y + a + y + a + "\n" + y + z + z + y + y + y + y + y + "\n" + y + y + y + y + y + b + y + b + "\n" + y + y + y + y + y + y + "\n" + z + y + y + y + y + y + "\n" + z + z + y + z + y + z + y; 
+}  
+
+function xMulticolore(){
+   var y = document.getElementById("textbox_id").value;
+   var a = document.getElementById("textbox2_id").value;
+   var b = document.getElementById("textbox3_id").value;
+   document.getElementById("dotboy_id").value = "." + "\n" + a + b + y + a + b + y + a + b + y + a + b + y + "\n" + b + y + a + b + y + a + b + y + a + b + y + a + "\n" + y + a + b + y + a + b + y + a + b + y + a + b + "\n" + a + b + y + a + b + y + a + b + y + a + b + y + "\n" + b + y + a + b + y + a + b + y + a + b + y + a + "\n" + y + a + b + y + a + b + y + a + b + y + a + b + "\n" + a + b + y + a + b + y + a + b + y + a + b + y + "\n" + b + y + a + b + y + a + b + y + a + b + y + a + "\n" + y + a + b + y + a + b + y + a + b + y + a + b + "\n" + a + b + y + a + b + y + a + b + y + a + b + y + "\n" + b + y + a + b + y + a + b + y + a + b + y + a + "\n" + y + a + b + y + a + b + y + a + b + y + a + b;
+}
+
+function xSwordman(){
+   var y = document.getElementById("textbox_id").value;
+   var a = document.getElementById("textbox2_id").value;
+   var b = document.getElementById("textbox3_id").value;
+   document.getElementById("dotboy_id").value = "." + "\n" + z + y + z + z + z + y + z + a + "\n" + z + y + y + y + y + y + z + a + "\n" + z + y + y + b + y + b + z + a + "\n" + z + y + y + y + y + y + z + a + "\n" + a + a + y + y + y + y + y + y + "\n" + a + a + b + b + b + b + "\n" + a + a + y + y + y + y + "\n" + z + y + z + z + z + y;
+}
+
+</script>
+
+<body>
+
+<table border = 1>
+  <tr>
+    <td>
+ <input type="text" style="background-color:#88DD61;width:125px" value="emoticon here" readonly/>
+ <input type="text" style="width:500px" id="textbox_id" name="answer" value=":steamsad:"/>
+ <span style="visibility:hidden" id="span2_id">
+ <input type="text" style="width:268px" id="textbox2_id" name="answer2" value=":steamhappy:"/>
+ <input type="text" style="width:268px" id="textbox3_id" name="answer3" value=":steamsalty:"/>
+ </span>
+    </td>
+ </tr>
+<tr>
+<td>
+<input type="text" style="background-color:#88DD61;width:125px" value="lowercase text here" readonly/>
+<input type="text" style="width:500px" id="babalou_id" value=""/>
+<input type="button" style="background-color:#8DD0DD;width:100px" value = "babalou!" onclick="babalou()"/>
+<input type="button" style="background-color:#E26D68;width:100px" value = "clear it!" onclick="clearInput()"/>
+
+<input type="button" style="background-color:#E5AE8E;width:100px" name="options" id="extras_id" value="enable extras!" onclick="extras()"/>
+
+<input type="button" style="background-color:#88DD61;width:200px" id="comment_id" value="comment compatibility ON" onclick="holler()"/>
+
+<table border = 1 width=50000px>
+<tr>
+<td>
+<textarea cols="50" rows="30" style="width:100%" id="dotboy_id" >.&#13;&#10;</textarea>
+</tr>
+</td>
+</table>
+
+<table>
+<tr>
+<td>
+<input type="text" style="background-color:#FFD170;width:125px" value="5 char friendly" readonly/>
+<input type="text" style="width:5000px" value="a-z . ' ! ? / # () _ &#8505; &#8495; &#9834; &#9835; &#9786;" readonly/>
+</tr>
+</td>
+<tr>
+<td>
+<input type="text" style="background-color:#FF8051;width:125px" value="5 char unfriendlÿ >:(" readonly/>
+<input type="text" style="width:5000px" value="(may conflict with each other AND spaces) &#9787;&#9731;&#8448;&#8456;&#383;" readonly/>
+
+
+</table>
+<input type="button" style="background-image:url(https://my.mixtape.moe/lbxbyc.png)" value="?" onclick="help()"/>
+<span style="visibility:hidden" id="span_id">
+<input type="button" style="background-color:#FFD170;width:100px" value="dragon" onclick="xDragon()"/>
+<input type="button" style="background-color:#FF8051;width:100px" value="multicolore" onclick="xMulticolore()"/>
+<input type="button" style="background-color:#FFD170;width:100px" value="swordman" onclick="xSwordman()"/>
+</span>
+</table>
+<br>
+<a href="http://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2016/03/28/876/493/694940094001_4819834920001_45b1c1c7-0d8b-4ebc-8e4c-609d406ec017.jpg?ve=1&tl=1">
+<img src="https://my.mixtape.moe/uvclin.PNG" border="0">
+</a>
+
+</body>
+</html>
